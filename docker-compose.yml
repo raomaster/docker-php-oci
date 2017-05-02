@@ -9,7 +9,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ../../php7/stock-critico/:/var/www/html
+      - ../../Php/monitoreo-critico/:/var/www/html
     stdin_open: true
     tty: true
     restart: always
