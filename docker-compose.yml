@@ -1,0 +1,25 @@
+
+version: "2"
+services:
+  web:
+    build: .
+    # links:
+    #   - oracledb
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../../php7/stock-critico/:/var/www/html
+    stdin_open: true
+    tty: true
+    restart: always
+  # oracledb:
+  #   image: wnameless/oracle-xe-11g
+  #   volumes:
+  #     - ./:/code
+  #   ports:
+  #     - "49160:22"
+  #     - "1521:1521"
+  #   restart: always
+  #   environment:
+  #     - ORACLE_ALLOW_REMOTE=true

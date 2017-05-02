@@ -1,0 +1,11 @@
+
+version: '2'
+
+services:
+  apache-php-oci:
+    image: apache-php-oci:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
